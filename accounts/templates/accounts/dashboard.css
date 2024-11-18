@@ -1,0 +1,191 @@
+/* dashboard2.css */
+
+:root {
+    --dark-bg: #1e1e2f;
+    --dark-card: #29293d;
+    --highlight: #f39c12;
+    --text-primary: #ffffff;
+    --text-secondary: #c0c0c0;
+    --accent: #e74c3c;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+}
+
+header {
+    background-color: var(--dark-card);
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.profile-btn-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.profile-btn {
+    background-color: var(--highlight);
+    color: var(--text-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover {
+    background-color: var(--accent);
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: var(--dark-card);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.profile-dropdown button {
+    width: 100%;
+    background-color: transparent;
+    color: var(--text-secondary);
+    padding: 10px 15px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-dropdown button:hover {
+    background-color: var(--highlight);
+    color: var(--text-primary);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.controls input,
+.controls select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--highlight);
+    background-color: var(--dark-card);
+    color: var(--text-primary);
+}
+
+.controls input:focus,
+.controls select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px var(--accent);
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    background-color: var(--dark-card);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover img {
+    transform: rotate(10deg);
+}
+
+.item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: var(--text-primary);
+}
+
+.item p {
+    margin: 5px 0;
+    color: var(--text-secondary);
+}
+
+.cart {
+    background-color: var(--dark-card);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.cart h3 {
+    margin-top: 0;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart ul li {
+    margin: 10px 0;
+    color: var(--text-secondary);
+}
+
+.cart button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--highlight);
+    color: var(--text-primary);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cart button:hover {
+    background-color: var(--accent);
+}

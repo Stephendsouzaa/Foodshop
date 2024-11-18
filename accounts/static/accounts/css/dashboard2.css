@@ -1,0 +1,217 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #040214, #000484);
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #000000;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.profile-btn-container {
+    position: relative;
+}
+
+.profile-btn {
+    padding: 12px 20px;
+    background: white;
+    color: #ff6f61;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.profile-btn:hover {
+    background: #ffe5e0;
+    color: #ff3d30;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.profile-dropdown button {
+    width: 100%;
+    padding: 12px 15px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    transition: background 0.3s ease;
+}
+
+.profile-dropdown button:hover {
+    background: #ffe5e0;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 20px;
+    margin: 20px 40px;
+    align-items: center;
+}
+
+.controls input,
+.controls select {
+    padding: 12px;
+    width: 300px;
+    border: 2px solid #ff6f61;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.controls input:focus,
+.controls select:focus {
+    border-color: #ff9a9e;
+}
+
+/* Inventory grid */
+.inventory-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+.item {
+    background: #ffffff;
+    width: calc(50% - 40px); /* Two items per row */
+    padding: 50px 70px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.item h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #ff6f61;
+    font-weight: 600;
+}
+
+.item p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.item button {
+    padding: 10px 20px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.item button:hover {
+    background: #ff9a9e;
+    transform: scale(1.1);
+}
+
+/* Cart styles */
+.cart {
+    background: #fff;
+    margin: 200px 400px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 40px);
+    float: right;
+}
+
+.cart h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #ff6f61;
+    font-weight: 600;
+}
+
+.cart ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.cart ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart ul li:last-child {
+    border-bottom: none;
+}
+
+.cart button {
+    padding: 12px 200px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cart button:hover {
+    background: #ff9a9e;
+    transform: scale(1.1);
+}
