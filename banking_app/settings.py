@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'your-default-secret-key')
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
 # Allowed hosts configuration
-ALLOWED_HOSTS = ['bank-system-r98n.onrender.com', 'localhost']
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,bank-system-r98n.onrender.com').split(',')
 
 # Application definition
 INSTALLED_APPS = [
