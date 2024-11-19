@@ -17,6 +17,9 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 # Allowed hosts configuration
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,bank-system-r98n.onrender.com').split(',')
 
+# CSRF Trusted Origins
+CSRF_TRUSTED_ORIGINS = os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS', 'https://foodshop-4.onrender.com').split(',')
+
 # Application definition
 INSTALLED_APPS = [
     # Django default apps
@@ -147,3 +150,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Debugging for Allowed Hosts
 print("DEBUG:", DEBUG)
 print("ALLOWED_HOSTS:", ALLOWED_HOSTS)
+print("CSRF_TRUSTED_ORIGINS:", CSRF_TRUSTED_ORIGINS)
