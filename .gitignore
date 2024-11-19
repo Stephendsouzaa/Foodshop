@@ -1,6 +1,4 @@
-﻿# Virtual environment
-venv/
-*.env
+﻿
 
 # Django
 *.log
