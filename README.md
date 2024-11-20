@@ -10,6 +10,8 @@ This is a simple Django-based food shop application. It allows users to perform 
 
 ---
 ### Hosted:
+https://foodshop-4.onrender.com/
+
 
 ## Installation
 
